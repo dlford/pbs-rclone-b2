@@ -1,0 +1,14 @@
+#!/bin/bash
+
+SOLO_BIN="/usr/local/bin/solo"
+RCLONE_BIN="/usr/bin/rclone"
+RCLONE_CONF_DIR="/home/USER/.config/rclone/rclone.conf"
+SOLO_PORT="6000"
+SYNC_ARGS="--create-empty-src-dirs --bwlimit 10M"
+SRC_PATH="/mnt/datastore/BACKUP_STORAGE_NAME"
+DEST_STORE="STORAGE_FROM_RCLONE_CONFIG"
+DEST_PATH="BUCKET_NAME/PATH/TO/TARGET"
+
+$SOLO_BIN -port=$SOLO_PORT $RCLONE_BIN --config=$RCLONE_CONF_DIR sync $SYNC_ARGS $SRC_PATH $DEST_STORE:$DEST_PATH
+
+exit 0
