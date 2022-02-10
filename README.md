@@ -18,3 +18,5 @@ SRC_PATH="/mnt/datastore/BACKUP_STORAGE_NAME"
 DEST_STORE="STORAGE_FROM_RCLONE_CONFIG"
 DEST_PATH="BUCKET_NAME/PATH/TO/TARGET"
 ```
+
+_Note: If you keep the `log-file` in args, consider adding it to `logrotate` or switching the log level, it can get pretty big on `log-level=INFO`_
