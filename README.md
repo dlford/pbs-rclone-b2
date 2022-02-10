@@ -1,6 +1,6 @@
 # PBS Rclone B2
 
-Syncs PBS backup directory with a B2 bucket
+Syncs a Proxmox Backup Server directory (Or any directory, actually) with a B2 bucket
 
 ## Setup
 
